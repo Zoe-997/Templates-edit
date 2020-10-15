@@ -1,0 +1,30 @@
+.filter-options-item {
+    padding: 20px 0;
+    &:last-child {
+        .filter-options-content {
+            margin-bottom: 0;
+            margin-top: -3px;
+        }
+    }
+    &.active{
+        .filter-options-title {
+            margin-bottom: 15px;
+            &:before{
+                content:"\f106";
+            }
+        }
+    }
+}
+.filter-options-title {
+    &:extend(.sidebar .accor-title all);
+    position:relative;
+    margin-bottom:0;
+    &:before{
+        content:"\f107";
+        font-family:@fontawesome;
+        position:absolute;
+        top:50%;
+        right:0;
+        .lateY-transform(@y: -50%);
+    }
+}
